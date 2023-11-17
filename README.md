@@ -37,6 +37,7 @@ Welcome to AngoBERTa, a masked language model finetuned using multilingual adapt
    pip install transformers
 
 ## Load the model
+ ```python
 
 from transformers import AutoModelForMaskedLM, AutoTokenizer
 
