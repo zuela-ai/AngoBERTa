@@ -44,17 +44,19 @@ from transformers import AutoModelForMaskedLM, AutoTokenizer
 model_name = "cx-olquinjica/AngoBERTa"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForMaskedLM.from_pretrained(model_name)
-
+```
 
 ## Generate Text
+ ```python
 
 input_text = "In Kimbundu, the word for 'hello' is [MASK]."
 inputs = tokenizer(input_text, return_tensors="pt")
 outputs = model(**inputs)
 logits = outputs.logits
+```
 
+## Explore Multilingual Capabilities:
 
-Explore Multilingual Capabilities:
 AngoBERTa is designed to handle multiple languages, including Kimbundu, Umbundu, Chokwe, Kikong, and Lua. Experiment with various texts in these languages to leverage the model's capabilities.
 
 🙌 Acknowledgments
